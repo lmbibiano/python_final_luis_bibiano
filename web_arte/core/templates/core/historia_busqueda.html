@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{%block content%}
+
+    <div class="container principal">
+
+    <h1>Busqueda de la Historia</h1>
+    <div class="card" >
+        <div class="card-body cuerpo">
+            <form action="{% url 'buscar_historia' %}" method="GET">
+                <input type="text" name="historia" id="historia">
+                <input type="submit" value="Buscar" class="btn btn-dark">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+

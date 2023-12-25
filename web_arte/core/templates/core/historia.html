@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+  
+{% block content %}
+    <div class="container">
+            <h1>Historia Ameicana</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{fomularioHistoria.as_p}}
+                <button type="submit" class="btn btn-dark">Enviar</button>
+              </form>
+              
+              <!--resultado-->
+              <div class="container">
+                <div class="row">
+                  {% for historia in historias %}
+                    <div class="col-md-4">
+                        
+                            <div class="card" style="width: 18rem;">
+                              <div class="card-body">
+                                <h5 class="card-title">{{historia.titulo}}</h5>
+                                <a href="{{historia.url}}" class="card-link">Conocer historia</a>
+                            </div>
+                        </div>
+                      
+                      </div>
+            {% endfor %}
+              
+  
+
+    {% endblock %}
+    

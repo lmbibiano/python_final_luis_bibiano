@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}<!DOCTYPE html>
+
+{% block content %}
+<!-- core/templates/core/registro.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Encabezado y enlaces a archivos CSS, etc. -->
+    <style>
+    h2{
+        margin-top: 30px;
+        text-align: center;
+    }
+    form{
+        margin-top: 80px;
+        text-align: center;
+    }
+    .login-container{
+        
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #aea8a8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+    </style>
+    
+
+</head>
+<body>
+    <div class="login-container">
+    <h2>Inicio de Sesion</h2>
+    <!-- core/templates/core/login.html -->
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Iniciar</button>
+    <div>    
+        <a href="{% url 'registro' %}" class="btn-secondary">¿No tienes una cuenta? Regístrate aquí</a>
+    </div>
+    
+    </div>
+</form>
+
+
+    </form>
+    {% endblock %}
+   
+</body>
+</html>

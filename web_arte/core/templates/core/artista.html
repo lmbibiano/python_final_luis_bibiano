@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+  
+{% block content %}
+    <div class="container">
+            <h1>Artistas</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{formularioArtista.as_p}}
+                <button type="submit" class="btn btn-dark">Enviar</button>
+              </form>
+              
+              <!--resultado-->
+              <div class="container">
+                <div class="row">
+                  {% for artista in artistas %}
+                    <div class="col-md-4">
+                        
+                            <div class="card" style="width: 18rem;">
+                              <div class="card-body">
+                                <h5 class="card-title">{{artista.nombre}}</h5>
+                                <a href="{{artista.url}}" class="card-link">Conocer artista</a>
+                            </div>
+                        </div>
+                      
+                      </div>
+                      {% endfor %}
+   {% endblock %}
+    

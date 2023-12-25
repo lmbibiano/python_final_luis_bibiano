@@ -1,0 +1,17 @@
+{%extends 'core/base.html'%}
+
+
+{%block content%}
+<div class="container principal">
+    <h1>Resultados</h1>
+    {%if artistas %}
+    <ul>
+        {%for artista in artistas%}
+            <li>{{artista.nombre}}</li>
+            <li>{{artista.url}}</li>
+        {%endfor%}
+    </ul>
+    {%endif%}
+</div>
+{%endblock%}
+

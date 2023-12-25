@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario con estilos</title>
+    <style>
+        /* Estilos para el formulario */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* Estilos para los campos del formulario */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para el botón */
+        button {
+            background-color: rgb(16, 15, 15);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Ajustes adicionales según necesites */
+        /* Puedes agregar estilos para los labels, mensajes de error, etc. */
+    </style>
+</head>
+<body>
+
+    <h1>Blog Personal </h1>
+    <!-- Tu formulario -->
+    <div class="container">
+        <form action="{% url 'blogs' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar</button>
+        </form>
+
+
+    </div>
+
+    <!-- Otros elementos HTML -->
+</body>
+</html>
+  
+
+      
+    {% endblock %}
+     

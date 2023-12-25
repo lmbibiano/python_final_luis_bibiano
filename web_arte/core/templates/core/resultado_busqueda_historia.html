@@ -1,0 +1,16 @@
+{%extends 'core/base.html'%}
+
+{%block content%}
+<div class="container principal">
+    
+    <h1>Resultados</h1>
+    {%if historias%}
+    <ul>
+        {%for historia in historias%}
+            <li>{{historia.titulo}}</li>
+            <li>{{historia.url}}</li>
+        {%endfor%}
+    </ul>
+    {%endif%}
+</div>|
+{%endblock%}

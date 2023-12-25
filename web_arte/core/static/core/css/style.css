@@ -1,0 +1,23 @@
+.card{
+    margin-top: 20px;
+}
+.card-body .cuerpo{
+    width: 900px !important;
+}
+
+.cuerpo{
+    width: 900px !important;
+    background-color: aliceblue;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+    margin-top: 30px;
+}
+.nav-item{
+    color: brown;
+
+}

@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<!-- core/templates/core/registro.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h2{
+        margin-top: 30px;
+        text-align: center;
+    }
+    form{
+        margin-top: 80px;
+        text-align: center;
+    }
+    .registro-container{
+        
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: solid 1px #ccc;
+            border-radius: 8px;
+            background-color: #aea8a8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    button{ 
+        background-color: rgb(16, 15, 15);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+        
+  
+        
+    </style>
+    
+    <!-- Encabezado y enlaces a archivos CSS, etc. -->
+    
+</head>
+<body>
+
+    <h2>Registro de usuario</h2>
+    <div class="registro-container"></div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+    </form>
+    {% endblock %}
+    
+</body>
+</html>

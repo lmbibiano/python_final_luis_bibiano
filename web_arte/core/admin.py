@@ -1,0 +1,14 @@
+
+from django.contrib import admin
+from .models import Curso, Historial, Artista
+from .models import Blog
+
+# Register your models here.
+
+# modelos registrados en el administrador
+admin.site.register(Curso)
+admin.site.register(Historial)
+admin.site.register(Artista)
+admin.site.register(Blog)
+
+
