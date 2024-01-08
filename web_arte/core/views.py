@@ -168,7 +168,7 @@ def crear_blog(request):
         return render(request, 'core/crear_blog.html')
     
     
-
+@login_required
 def editar_perfil_view(request):
 
     usuario = request.user

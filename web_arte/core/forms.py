@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Blog
 from django.contrib.auth.models import User  # Importa el modelo User si no lo has hecho
-
+# from django import UserCreationFormulario, UserEditionFormulario
 from .models import Blog
 from django import forms
 

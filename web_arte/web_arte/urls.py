@@ -44,6 +44,7 @@ urlpatterns = [
     path('crear_blog/', views.crear_blog, name='crear_blog'),
     path('editar_perfil/', views.editar_perfil_view, name="editar_perfil"),
     path('crear_avatar/', views.crear_avatar_view, name="crear_avatar"),
+    
 #     path('exito/', views.detalle_blog, name='blog'),
 #]
  ]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
